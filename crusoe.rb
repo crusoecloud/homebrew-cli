@@ -5,21 +5,21 @@
 class Crusoe < Formula
   desc "Software to manage carbon negative computing infrastructure running on Crusoe Cloud"
   homepage "https://crusoecloud.com/"
-  version "0.21.2"
+  version "0.21.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.21.2/crusoe_Darwin_arm64.tar.gz"
-      sha256 "5d69e315a755a27b5ebf27adf67ab2450b67257578357b9c913338ff35981fdf"
+      url "https://github.com/crusoecloud/cli/releases/download/v0.21.3/crusoe_Darwin_arm64.tar.gz"
+      sha256 "7622a841e468abd8c6e3c8c20ac8ff8e10922eae45d7fe6ee4a224c9f61c3cee"
 
       def install
         bin.install "crusoe"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.21.2/crusoe_Darwin_x86_64.tar.gz"
-      sha256 "f021516a9faf31c4056cd00a519ea30c57a7f62f62ec806716dd4ab5fa2cf2c5"
+      url "https://github.com/crusoecloud/cli/releases/download/v0.21.3/crusoe_Darwin_x86_64.tar.gz"
+      sha256 "09f9a426aaeed4fc1f96f4fe362d090201a581f3f24616dc0c93370e27554a98"
 
       def install
         bin.install "crusoe"
@@ -29,16 +29,16 @@ class Crusoe < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.21.2/crusoe_Linux_arm64.tar.gz"
-      sha256 "9e3a3d5f17d3994f5cc64d78ccd1401e0e325b5d7473854bb32ee5085ac0a947"
+      url "https://github.com/crusoecloud/cli/releases/download/v0.21.3/crusoe_Linux_arm64.tar.gz"
+      sha256 "8438b8633c4248c95b62f91bb29bb992d202c3486c1f9ba5d9effa0d11e463f6"
 
       def install
         bin.install "crusoe"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.21.2/crusoe_Linux_x86_64.tar.gz"
-      sha256 "a2438240c5c0d69ec1874f6f7e5aae7521ad5333b77753c0e2ae0aa7d1571e73"
+      url "https://github.com/crusoecloud/cli/releases/download/v0.21.3/crusoe_Linux_x86_64.tar.gz"
+      sha256 "8aac1c59dab5727cb7ca76183b00ff17f1d12cdf8a6ed94aee1f4d2a0fa5a445"
 
       def install
         bin.install "crusoe"
