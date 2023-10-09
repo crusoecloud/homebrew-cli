@@ -5,21 +5,21 @@
 class Crusoe < Formula
   desc "Software to manage carbon negative computing infrastructure running on Crusoe Cloud"
   homepage "https://crusoecloud.com/"
-  version "0.21.5"
+  version "0.21.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.21.5/crusoe_Darwin_arm64.tar.gz"
-      sha256 "151103a1ccc2dfa7a507027e01b033679c6204fd91ed6569217956110c6bee05"
+      url "https://github.com/crusoecloud/cli/releases/download/v0.21.12/crusoe_Darwin_arm64.tar.gz"
+      sha256 "31994302998c43e630d8f9830ac92377ffd9e8e29aaae9482993f4f55fec380f"
 
       def install
         bin.install "crusoe"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.21.5/crusoe_Darwin_x86_64.tar.gz"
-      sha256 "260fb340c9caf2f5686303cbad07336464d0455b01557cb438587a5753b27a54"
+      url "https://github.com/crusoecloud/cli/releases/download/v0.21.12/crusoe_Darwin_x86_64.tar.gz"
+      sha256 "0e7787e805e743ed37036ab6757ccf65807271b255504172a53aa3aa0a34ec39"
 
       def install
         bin.install "crusoe"
@@ -28,17 +28,17 @@ class Crusoe < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.21.5/crusoe_Linux_arm64.tar.gz"
-      sha256 "10f82a9a4d43650a4132479a83d45f11ece5ddf3ec4db6ca6cb673fe2502100e"
+    if Hardware::CPU.intel?
+      url "https://github.com/crusoecloud/cli/releases/download/v0.21.12/crusoe_Linux_x86_64.tar.gz"
+      sha256 "28c0d2f067f27afc3d1b7bce061ad836a35f9f246e4ebc1bf194378ed26eb729"
 
       def install
         bin.install "crusoe"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.21.5/crusoe_Linux_x86_64.tar.gz"
-      sha256 "b86371e370c5d1c24e74aa256844d5dbc2ea9fd6839db9040bff8683b9d4e1a3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/crusoecloud/cli/releases/download/v0.21.12/crusoe_Linux_arm64.tar.gz"
+      sha256 "d59b4c3df9bc3b8f35b1ccc7834f6213136c95954151ee144c44f304f6d623a9"
 
       def install
         bin.install "crusoe"
