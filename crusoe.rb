@@ -5,21 +5,21 @@
 class Crusoe < Formula
   desc "Software to manage carbon negative computing infrastructure running on Crusoe Cloud"
   homepage "https://crusoecloud.com/"
-  version "0.24.0"
+  version "0.26.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.24.0/crusoe_Darwin_arm64.tar.gz"
-      sha256 "2e8ca33e7f269e9cb3f1aadd57bb5dc3c7f2468eb2564164f4a242adf8ba9b55"
+    if Hardware::CPU.intel?
+      url "https://github.com/crusoecloud/cli/releases/download/v0.26.0/crusoe_Darwin_x86_64.tar.gz"
+      sha256 "ff392e4733f2bd190b0cb77f9bfcae89d00fc6cfe10180088beb6c6f261ea308"
 
       def install
         bin.install "crusoe"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.24.0/crusoe_Darwin_x86_64.tar.gz"
-      sha256 "6daee28949daa2a21553d64b7c6d6c4212b1994e001c39ace7de4bd46c225ff6"
+    if Hardware::CPU.arm?
+      url "https://github.com/crusoecloud/cli/releases/download/v0.26.0/crusoe_Darwin_arm64.tar.gz"
+      sha256 "e515a9c428cdd2a9796aae925f13efc287b6467be8634a3052dbbdecd82efcf6"
 
       def install
         bin.install "crusoe"
@@ -28,17 +28,17 @@ class Crusoe < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.24.0/crusoe_Linux_arm64.tar.gz"
-      sha256 "c25d9a3303e701ddc9e2b638dffbd3fa92fd4987becb902bc3ba9110e60c663d"
+    if Hardware::CPU.intel?
+      url "https://github.com/crusoecloud/cli/releases/download/v0.26.0/crusoe_Linux_x86_64.tar.gz"
+      sha256 "8ed3b96073e94f9e1242b9e3c812f637d31e626c86a72c46e220400a004177bc"
 
       def install
         bin.install "crusoe"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/crusoecloud/cli/releases/download/v0.24.0/crusoe_Linux_x86_64.tar.gz"
-      sha256 "00a1ebe3d4f996a0636991c26004ce27094cc0f6e9eb8fa94353bfff9f01f854"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/crusoecloud/cli/releases/download/v0.26.0/crusoe_Linux_arm64.tar.gz"
+      sha256 "eb879dce1c831b665d63951238ece341511c0d28a915c9b005c774ca6607be9f"
 
       def install
         bin.install "crusoe"
