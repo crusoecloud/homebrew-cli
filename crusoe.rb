@@ -5,21 +5,21 @@
 class Crusoe < Formula
   desc "Software to manage carbon negative computing infrastructure running on Crusoe Cloud"
   homepage "https://crusoecloud.com/"
-  version "1.0.6"
+  version "1.0.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/crusoecloud/cli/releases/download/v1.0.6/crusoe_Darwin_x86_64.tar.gz"
-      sha256 "04cfe46475bc71377a69e42a2697233227a392caefc4104d161a245d407c66e4"
+      url "https://github.com/crusoecloud/cli/releases/download/v1.0.7/crusoe_Darwin_x86_64.tar.gz"
+      sha256 "6af19bb3ff13948090d81ee35cfeb38305c5e34c30f48c4316fa591d62ee4a86"
 
       define_method(:install) do
         bin.install "crusoe"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/crusoecloud/cli/releases/download/v1.0.6/crusoe_Darwin_arm64.tar.gz"
-      sha256 "91bc389c24e9927278e675c4770db23586ec0fcda62b0f12173561117826190d"
+      url "https://github.com/crusoecloud/cli/releases/download/v1.0.7/crusoe_Darwin_arm64.tar.gz"
+      sha256 "70b9b2172c04b01e69423e3e5e64ddfa427d20072fbaabbf2adfa69a7fb693cb"
 
       define_method(:install) do
         bin.install "crusoe"
@@ -29,15 +29,15 @@ class Crusoe < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/crusoecloud/cli/releases/download/v1.0.6/crusoe_Linux_x86_64.tar.gz"
-      sha256 "680d641fbe5ca0d85fba0aa5ddc571ef07c944ec9b67726e771ea3851274f3d6"
+      url "https://github.com/crusoecloud/cli/releases/download/v1.0.7/crusoe_Linux_x86_64.tar.gz"
+      sha256 "d7bc234cf0e34896536f3a74551d1d7e4a8602809b722eee14751aae3f03fbad"
       define_method(:install) do
         bin.install "crusoe"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/crusoecloud/cli/releases/download/v1.0.6/crusoe_Linux_arm64.tar.gz"
-      sha256 "ef67585a9d0d2acc402fd12f401ddeb4d8aa5e4a2020ab87cf2697541854e2ee"
+      url "https://github.com/crusoecloud/cli/releases/download/v1.0.7/crusoe_Linux_arm64.tar.gz"
+      sha256 "91eb4ea5644baab2b000a0e54f0d280a28eadcf602becc6e2de32dc6f1ee2205"
       define_method(:install) do
         bin.install "crusoe"
       end
